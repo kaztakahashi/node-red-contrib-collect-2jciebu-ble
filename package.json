@@ -1,0 +1,24 @@
+{
+  "author": "",
+  "config": {
+    "unsafe-perm": true
+  },
+  "dependencies": {
+    "noble": "^1.9.1"
+  },
+  "keywords": [
+    "node-red"
+  ],
+  "license": "ISC",
+  "main": "collect-2jciebu-ble.js",
+  "name": "node-red-contrib-2jciebu-ble",
+  "node-red": {
+    "nodes": {
+      "2jciebl01": "collect-2jciebu-ble.js"
+    }
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "0.0.1"
+}

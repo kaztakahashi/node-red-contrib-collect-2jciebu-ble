@@ -1,0 +1,49 @@
+<script type="text/x-red" data-template-name="2jciebu-ble">
+  <div class="form-row">
+    <label for="node-input-uuid" style="width: 60%;"><i class="fa fa-wrench"></i> UUID</label>
+    <input type="text" id="node-input-uuid" />
+  </div>
+  <div class="form-row">
+    <label for="node-input-topic" style="width: 60%;"><i class="fa fa-tasks"></i> topic</label>
+    <input type="text" id="node-input-topic" />
+  </div>
+  <div class="form-row">
+     <label for="node-input-dup" style="width: 60%;"><i class="fa fa-check"></i> Allow duplicates</label>
+     <input type="checkbox" id="node-input-dup" style="width: 30%;" />
+  </div>
+  <div class="form-row">
+     <label for="node-input-continuous" style="width: 60%;"><i class="fa fa-check"></i> countinuous scan</label>
+     <input type="checkbox" id="node-input-continuous" style="width: 30%;" />
+  </div>
+</script>
+
+<script type="text/javascript">
+    RED.nodes.registerType('2jciebuble',{
+        category: 'input',
+        color: '#e5e5e5',
+        defaults: {
+		uuid: { value: "",required: false },
+		topic: { value: "2JCIE-BU", required:false },
+                dup: { value: false, required: false },
+                continuous: { value: false, required: false}
+        },
+        inputs:1,
+        outputs:1,
+        icon: 'icons8-proximity-sensor-50.png',
+        label: function() {
+            return this.name||"2jciebuble";
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="2jciebl01">
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="2jciebl01">
+    <p>A simple node that converts the message payloads into all lower-case characters</p>
+</script>
+
